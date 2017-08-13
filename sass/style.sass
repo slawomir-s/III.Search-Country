@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand')
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond')
+
+$align: center
+$display: block
+$position: relative
+
+* 
+  box-sizing: border-box
+
+body 
+    margin: 0 auto
+    font-family: 'EB Garamond', serif
+    padding: 15px
+    text-align: $align
+    background: url(http://dawnsescapadestravel.com/wp-content/uploads/2013/09/grungy-world-map-background.jpg) no-repeat center center fixed
+    background-size: cover
+    background-color: #fff
+    color: #494949
+
+.row:before, 
+.row:after 
+    content: ""
+    display: table
+    clear: both
+
+.container 
+    max-width: 1200px
+    margin: 10px auto
+    width: 100%
+
+header 
+    .description 
+        h1 
+            font-size: 60px
+            margin-top: 10px
+            display: $display
+            color: #fff
+            font-family: 'Quicksand', sans-serif
+
+.research 
+    margin-top: 30px
+    background: rgba(0, 0, 0, 0.4)
+    height: 180px
+    margin-left: 350px
+    margin-right: 350px
+    box-shadow: 0 2px 5px 2px gray
+    p
+        color: #fff
+        font-size: 20px
+        padding-top: 30px
+    input 
+        display: $display
+        font-size: 14px
+        width: 240px
+        margin: 10px auto
+        padding: 10px 8px 10px 8px
+        border-radius: 5px
+        box-shadow: inset 0 1px 2px rgba(0,0,0, .55), 0px 1px 1px rgba(255,255,255,.5)
+        border: 1px solid #666
+        text-align: $align
+        opacity: 0.5
+        &:hover,
+        &:focus 
+            opacity: .7
+            color: #08c
+            border: 1px solid #08c
+            box-shadow: 0px 1px 0px rgba(255,255,255,.25),inset 0px 3px 6px rgba(0,0,0,.25)
+        &[type="text"]:focus 
+            box-shadow: inset 0 1px 2px rgba(255,255,255, .35), 0px 1px 15px rgba(0,246,255,.5)
+            border: 1px solid #08c
+            outline: none
+    button
+        opacity: .99
+        width: 150px
+        background: #EFAC6B
+        box-shadow: inset 0 1px 2px rgba(255,255,255, .35), 0px 1px 6px rgba(0,246,255,.5)
+        border: 1px solid #0a5378
+        border-radius: 4px
+        color: #494949
+        cursor: pointer
+        text-shadow: 0px -1px 0px rgba(0,0,0,.5)
+        height: 40px
+        &:hover 
+            background: #08c
+            width: 150px
+            border: 1px solid #0a5378
+            border-radius: 3px
+            box-shadow: inset 0px 3px 16px rgba(0,0,0,.25),0px 1px 10px rgba(255,255,255,.5),inset 0px -1px 2px rgba(255,255,255,.35);
+            text-shadow: 0px 1px 1px rgba(0,0,0,.65)
+            transition: all 0.40s ease-out
+
+.table 
+    .contentbox 
+        position: $position
+        background: rgba(0, 0, 0, 0.6)
+        box-shadow: 0 2px 5px 2px gray
+        margin: 40px 450px
+        ul 
+            margin: 0 10px
+            padding: 10px 10px
+            li 
+                font-size: 16px
+                list-style-type: none
+                padding: 10px
+                margin: 3px 5px
+                background: rgba(0, 0, 0, 0.4)
+                text-align: left
+                color: #B66C36
+                span 
+                    display: inline-block
+                    width: 50%
+            li.name 
+                background: rgba(0, 0, 0, 0.4)
+                color: #EFAC6B
+                font-size: 20px
+                padding: 5px 0
+                text-align: $align
+            li.info 
+                background: rgba(0, 0, 0, 0.4)
+                color: #fff
+                font-size: 17px
+            .flag 
+                position: $position
+                display: inline
+                img
+                    height: 100px
+                    width: 140px
+
+footer 
+    .author 
+        background: rgba(229, 138, 67, 0.5)
+        height: 60px
+        position: fixed
+        width: 100%
+        font-weight: bold
+        line-height: 3
+        bottom: 0
+        left: 0
+        right: 0
+        color: #fff
+
+@media(min-width: 481px) and (max-width: 1199px) 
+  
+    header 
+        .description 
+            h1 
+                font-size: 2.2em
+                margin-top: 40px
+            
+    .research 
+        height: 200px
+        margin-left: 120px
+        margin-right: 120px
+    
+    .table 
+        .contentbox 
+            margin: 40px 150px
+            ul 
+                li 
+                    font-size: 0.9em
+                li
+                    .name 
+                        font-size: 1.1em
+                li
+                    .info 
+                        font-size: 1em
+                .flag 
+                    img
+                        height: 80px
+                        width: 120px
+
+    footer 
+        .author 
+            height: 50px;
+            line-height: 3
+
+@media(max-width: 480px) 
+  
+    header 
+        .description 
+            h1 
+                font-size: 30px
+                margin-top: 40px
+
+    .research 
+        height: 220px
+        margin-left: 10px
+        margin-right: 10px
+        margin-top: 10px
+        font-size: 0.8em
+        p
+            font-size: 1.2em
+        input
+            display: block
+            font-size: 14px
+            width: 180px    
+    
+    .table 
+        .contentbox 
+            margin: 10px
+            ul 
+                li 
+                    font-size: 0.8em
+                li
+                    .name 
+                        font-size: 1.0em
+                li
+                    .info 
+                        font-size: 0.9em
+                .flag 
+                    img
+                        height: 60px
+                        width: 100px
+
+    footer 
+        .author 
+            height: 50px
+            line-height: 3
